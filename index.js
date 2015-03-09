@@ -3,9 +3,11 @@
 var PLUGIN_NAME  = 'imagemin',
     _            = require('lodash'),
     gulp         = require('gulp'),
+    chalk        = require('chalk'),
     imagemin     = require('gulp-imagemin'),
     changed      = require('gulp-changed'),
     pngquant     = require('imagemin-pngquant'),
+    util         = require('gulp-util'),
     elixirUtil   = require('laravel-elixir/ingredients/commands/Utilities'),
     Notification = require('laravel-elixir/ingredients/commands/Notification'),
     elixir       = require('laravel-elixir');
@@ -35,9 +37,8 @@ elixir.extend(PLUGIN_NAME, function (src, output, options) {
       .pipe(changed(output))
       .pipe(imagemin(options.imagemin))
       .pipe(gulp.dest(output))
-      .pipe(new Notification().message(PLUGIN_NAME + ' completed running!'))
       .on('error', function () {
-        return new Notification().error('error occured while running ' + PLUGIN_NAME);
+        util.log(chalk.red('error occured while running ' + PLUGIN_NAME));
       });
   });
 

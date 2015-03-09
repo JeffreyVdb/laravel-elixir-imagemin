@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-imagemin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Laravel Elixir Imagemin",
   "main": "index.js",
   "repository": {
@@ -19,8 +19,10 @@
   "license": "MIT",
   "homepage": "https://github.com/JeffreyVdb/laravel-elixir-imagemin",
   "dependencies": {
+    "chalk": "^1.0.0",
     "gulp-changed": "^1.1.1",
     "gulp-imagemin": "^2.2.1",
+    "gulp-util": "^3.0.4",
     "imagemin-pngquant": "^4.0.0",
     "lodash": "^3.3.1"
   }
