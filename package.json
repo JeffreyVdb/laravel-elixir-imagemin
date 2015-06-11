@@ -21,7 +21,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "gulp-changed": "^1.1.1",
-    "gulp-imagemin": "^2.2.1",
+    "gulp-imagemin": "2.2.1",
     "gulp-util": "^3.0.4",
     "imagemin-pngquant": "^4.0.0",
     "lodash": "^3.3.1"
